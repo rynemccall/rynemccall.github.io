@@ -14,6 +14,7 @@ Here are a few things that have frustrated me that are incredibly difficult to f
 [Hipchat](https://www.hipchat.com/) or [Campfire](https://campfirenow.com/) are fine options. [Skype](http://www.skype.com/) and IRC are not.
 
 There are only a few things the chat tool needs to be able to do:
+
 * must support 1 to 1 chats
 * must support ad-hoc and long-lived group chats that are easily discoverable
 * must have a rich API
