@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rules for a new software company"
-date: 2014-05-11 18:58
+date: 2014-05-11 20:19:00 -0400
 categories: technology business
 ---
 
