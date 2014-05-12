@@ -30,3 +30,8 @@ I think it is probably impossible to find a single information storage system th
 # Use the most popular technology
 
 Unless there is a magnitude of order benefit from using a less popular technology, you should use the most popular technology. "Picking the winner" has two key benefits. First, you are more likely to find people that have experience with the more popular technology. Secondly, and more importantly, the more popular technology will likely have a richer support and development ecosystem which will likely overcome whatever initial advantage the less popular technology offered.
+
+# Store data in standard formats
+
+* Data should be stored in standard, lossless formats like UTF-8
+* Input data should be validated when received and if valid, stored in a standard format. If invalid, the input should be rejected.
