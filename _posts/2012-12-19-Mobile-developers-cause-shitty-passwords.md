@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Mobile developers cause crappy passwords"
+title: "Mobile developers cause shitty passwords"
 date: 2012-12-19 18:00
 categories: technology
 ---
