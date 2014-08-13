@@ -16,8 +16,10 @@ Here are four things that I really dislike about Python (with examples):
 
 The lack of static typing increases the cost of entry for new developers. When you come across a function like:
 
-    def rank(cars):
-        ...
+{% highlight python %}
+def rank(cars):
+    ...
+{% endhighlight %}
 
 how can you know what the expected inputs and outputs are without examining every line of code in the function?
 
@@ -27,18 +29,22 @@ What does the function return? A list of Car objects? A generator that yields di
 
 If the code base you are working in is not incredibly consistent, you'll end up with calling code that looks one of two ways:
 
-    cars = rank(unranked_cars) or []
+{% highlight python %}
+cars = rank(unranked_cars) or []
 
-    for car in cars:
-        # do something
+for car in cars:
+    # do something
+{% endhighlight %}
 
 or
 
-    cars = rank(unranked_cars)
+{% highlight python %}
+cars = rank(unranked_cars)
 
-    if cars:
-        for car in cars:
-            # do something
+if cars:
+    for car in cars:
+        # do something
+{% endhighlight %}
 
 Yuck! I realize that static typing isn't a silver bullet, but it keeps you from polluting your code with this cruft.
 
@@ -46,16 +52,17 @@ Yuck! I realize that static typing isn't a silver bullet, but it keeps you from 
 
 When you declare a function with a mutable default value, all calls that omit the keyword argument share a reference to the default keyword argument. That gives behavior like:
 
-    def a(b, c=[]):
-        c.append(b)
+{% highlight python %}
+def a(b, c=[]):
+    c.append(b)
+    return c
 
-        return c
+a('d')
+# ['d']
 
-    a('d')
-    # ['d']
-
-    a('e')
-    # ['d', 'e']
+a('e')
+# ['d', 'e']
+{% endhighlight %}
 
 While I get what is going on here, it surprised the hell out of me the first time I encountered it. It seems like everyone that uses Python has been bitten by this. It is so common that IDEs hint that this is probably not the behavior that you want. If everyone gets cut by a language "feature", I think that the language has failed the principle of least surprise.
 
@@ -69,11 +76,15 @@ My final gripe with Python has to be one of the most common gotchas. Everyone th
 
 But, even experienced developers can get bitten when changing a 2-tuple to a 1-tuple. Say you want to remove the d element from the value being passed to the b keyword argument in the function below. In all other languages and for all other collections and n-tuples where n > 2, you can (and by convention) probably do remove the last element and the proceeding comma.
 
-    a(b=(c, d))
+{% highlight python %}
+a(b=(c, d))
+{% endhighlight %}
 
 But, if you follow that convention here, you get:
 
-    a(b=(c))
+{% highlight python %}
+a(b=(c))
+{% endhighlight %}
 
 which passes the single value of c as the b keyword parameter instead of a 1-tuple and is probably not what you want.
 
