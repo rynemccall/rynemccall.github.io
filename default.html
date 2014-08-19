@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/assets/css/syntax.css">
+
+        <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">{{ site.name }}</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Articles</a></li>
+        <li><a href="#">Résumé</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact me <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="mailto:ryne@rynemccall.com">E-mail</a></li>
+            <li><a href="https://www.facebook.com/rynemccall">Facebook</a></li>
+            <li><a href="https://www.linkedin.com/in/rynemccall">LinkedIn</a></li>
+            <li><a href="https://twitter.com/rynemccall">Twitter</a></li>
+            <li class="divider"></li>
+            <li><a href="https://github.com/rynemccall">GitHub</a></li>
+            <li><a href="https://stackoverflow.com/users/1286629/rynemccall">StackOverflow</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-md-2 col-xs-0"></div>
+                  <div class="col-md-8 col-xs-12">{{ content }}</div>
+                  <div class="col-md-2 col-xs-0"></div>
+              </div> 
+          </div>
+    </body>
+</html>
