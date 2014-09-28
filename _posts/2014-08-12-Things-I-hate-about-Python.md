@@ -12,7 +12,9 @@ Familiarity breeds contempt. For the past year or so, I've been using Python as 
 
 Here are four things that I really dislike about Python (with examples):
 
-1. Lack of static typing
+<ol>
+<li>
+Lack of static typing
 
 The lack of static typing increases the cost of entry for new developers. When you come across a function like:
 
@@ -47,8 +49,10 @@ if cars:
 {% endhighlight %}
 
 Yuck! I realize that static typing isn't a silver bullet, but it keeps you from polluting your code with this cruft.
+</li>
 
-2. Multiple invocations of a function with a mutable default keyword argument share a single reference
+<li>
+Multiple invocations of a function with a mutable default keyword argument share a single reference
 
 When you declare a function with a mutable default value, all calls that omit the keyword argument share a reference to the default keyword argument. That gives behavior like:
 
@@ -65,12 +69,16 @@ a('e')
 {% endhighlight %}
 
 While I get what is going on here, it surprised the hell out of me the first time I encountered it. It seems like everyone that uses Python has been bitten by this. It is so common that IDEs hint that this is probably not the behavior that you want. If everyone gets cut by a language "feature", I think that the language has failed the principle of least surprise.
+</li>
 
-3. `__init__.py`
+<li>
+`__init__.py`
 
 Python ([documentation](https://docs.python.org/2/tutorial/modules.html#packages)) uses the existence of a file named `__init__.py` in a folder to indicate that the folder should be treated as a module. While I really do not like being required to have a bunch of `__init__.py` files laying around polluting my source tree, that's not my main beef. My biggest problem with this solution to namespacing is the number of times a missing `__init__.py` file has caused a tool like nosetests to operate in a subtly but completely unintended way.
+</li>
 
-4. 2-tuple becomes a no-tuple
+<li>
+2-tuple becomes a no-tuple
 
 My final gripe with Python has to be one of the most common gotchas. Everyone that has used Python knows that the syntax for a 1-tuple is the slightly irregular `(foo, )`.
 
@@ -89,3 +97,4 @@ a(b=(c))
 which passes the single value of c as the b keyword parameter instead of a 1-tuple and is probably not what you want.
 
 This trouble dealing with 0-tuples and 1-tuples is similar to the nuance between an empty set `set()` and a set with at least one element in it `{element1, ...}`. For a language concerned with beauty, nuance is an ugly wart.
+</li>
