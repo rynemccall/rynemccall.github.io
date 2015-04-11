@@ -5,6 +5,8 @@ date: 2014-05-11 20:19:00 -0400
 categories: technology business
 ---
 
+`Updated 11-APR-2015`
+
 If you are staring a new company, you have a once-in-the-company's-lifetime opportunity to make some simple policy decisions that will pay enormous dividends if the company makes it. Unfortunately, these policy decisions are so simple and mundane, they are typically made on an ad-hoc basis without much consideration.
 
 Here are a few things that have frustrated me that are incredibly difficult to fix once a company has grown beyond a handful of people.
@@ -20,19 +22,35 @@ There are only a few things the chat tool needs to be able to do:
 * must have a rich API
 * must be usable by a non-technical person without any technical support
 
-# All systems must authenticate against a centralized authentication infrastructure
+# Make all information searchable
 
-# All information storage systems must interface with a centralized search infrastructure
+All information storage systems must interface with centralized search infrastructure. I think it is probably impossible to find a single information storage system that will meet everyones needs. But, it is possible to require all information systems to be discoverable if you establish the policy that any new system must be added to the company-wide search infrastructure.
 
-I think it is probably impossible to find a single information storage system that will meet everyones needs. But, it is possible to require all information systems to be discoverable if you establish the policy that any new system must be added to the company-wide search infrastructure.
-
-# An easily searchable corporate directory must exist
-
-# Use the most popular technology
+# Choose your technology wisely
 
 Unless there is a magnitude of order benefit from using a less popular technology, you should use the most popular technology. "Picking the winner" has two key benefits. First, you are more likely to find people that have experience with the more popular technology. Secondly, and more importantly, the more popular technology will likely have a richer support and development ecosystem which will likely overcome whatever initial advantage the less popular technology offered.
 
 # Store data in standard formats
 
-* Data should be stored in standard, lossless formats like UTF-8
+* Data should be stored in standard, lossless formats like UTF-8.
+* When possible, reach to existing specifications or RFCs rather than creating your own. (These specifications were created by hardcore neckbeards of yore. You do not want to compete with them because you will almost always do a worse job.) 
 * Input data should be validated when received and if valid, stored in a standard format. If invalid, the input should be rejected.
+
+<figure align="center">
+  <img src="http://upload.wikimedia.org/wikipedia/commons/f/f3/Richard_Stallman_by_Anders_Brenna_01.jpg" alt="Richard Stallman" width="50%" />
+  <figcaption>
+    <p>
+      Hardest of hardcore neckbeards
+      <br />
+      image by Anders Brenna [<a href="http://creativecommons.org/licenses/by/3.0/no/deed.en">CC BY 3.0 no</a>], <a href="http://commons.wikimedia.org/wiki/File%3ARichard_Stallman_by_Anders_Brenna_01.jpg">via Wikimedia Commons</a>
+    </p>
+  </figcaption>
+</figure>
+
+# Create an awesome, searchable corporate directory
+
+The reason we bring people together in companies is because people are more productive when they work together. Don't squander this productivity by making it difficult to collaborate.
+
+# Centralize authentication infrastructure
+
+All systems must authenticate against centralized authentication infrastructure. While you don't need true SSO out of the gate, you should only need one set of credentials to access any system.
