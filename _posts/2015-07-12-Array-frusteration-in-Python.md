@@ -18,11 +18,11 @@ For example:
     In [2]: x
     Out[2]: []
 
-    In [3]: x [5] = 'foo'
+    In [3]: x[5] = 'foo'
     ---------------------------------------------------------------------------
     IndexError                                Traceback (most recent call last)
     <ipython-input-3-e8db34a35d14> in <module>()
-    ----> 1 x [5] = 'foo'
+    ----> 1 x[5] = 'foo'
 
     IndexError: list assignment index out of range
 
